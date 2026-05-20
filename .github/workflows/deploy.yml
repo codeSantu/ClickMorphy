@@ -30,8 +30,14 @@ jobs:
 
       - name: Build for GitHub Pages
         run: npm run build
-        env:
-          GITHUB_PAGES: 'true'
+
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          ls dist/assets/*.css
+          grep -q "stylesheet" dist/index.html
+          ! grep -q "/src/style.css" dist/index.html
+          echo "Build OK — bundled CSS/JS ready for Pages"
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

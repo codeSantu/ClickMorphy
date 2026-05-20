@@ -1,3 +1,5 @@
+import './style.css';
+
 const CONTACT_EMAIL = 'clickmorphy@gmail.com';
 
 const EMAIL_SUBJECT_PREFIX = '[Clickmorphy Website]';

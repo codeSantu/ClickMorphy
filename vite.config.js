@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/ClickMorphy/' : '/',
+  // Relative base works reliably on github.io/ClickMorphy/
+  base: './',
   build: {
     outDir: 'dist',
     assetsInlineLimit: 4096,

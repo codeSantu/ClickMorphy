@@ -36,11 +36,16 @@ Output is in the `dist/` folder.
 
 ### GitHub Pages (recommended)
 
-This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+Workflow: `.github/workflows/deploy.yml` — builds the site and pushes to the `gh-pages` branch.
 
-1. Push to the `main` branch
-2. On GitHub: **Settings → Pages → Build and deployment → Source:** select **GitHub Actions**
-3. After the workflow runs, the site is live at `https://codesantu.github.io/ClickMorphy/`
+**One-time setup (fixes the deploy-pages 404 error):**
+
+1. Open [github.com/codeSantu/ClickMorphy/settings/pages](https://github.com/codeSantu/ClickMorphy/settings/pages)
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · **Save**
+4. Push to `main` or re-run the workflow from the **Actions** tab
+
+Live URL: [https://codesantu.github.io/ClickMorphy/](https://codesantu.github.io/ClickMorphy/)
 
 Local production build matching GitHub Pages paths (PowerShell):
 

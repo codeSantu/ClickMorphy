@@ -38,14 +38,15 @@ Output is in the `dist/` folder.
 
 Workflow: `.github/workflows/deploy.yml` — builds the site and pushes to the `gh-pages` branch.
 
-**One-time setup (required — do NOT use `main` branch as source):**
+**One-time setup (fixes 404 logos + style.css MIME errors):**
 
 1. Open [github.com/codeSantu/ClickMorphy/settings/pages](https://github.com/codeSantu/ClickMorphy/settings/pages)
 2. **Build and deployment → Source:** **Deploy from a branch**
-3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · **Save**
-4. Wait for the **Actions** workflow to finish, then hard-refresh the site (`Ctrl+F5`)
+3. **Branch:** `main` · **Folder:** `/docs` · **Save**
+4. Wait for the **Actions** workflow to finish, then hard-refresh (`Ctrl+F5`)
 
-> If the site looks unstyled (plain HTML), Pages is serving the wrong branch. It must be **`gh-pages`**, not **`main`**.
+> **Do not use `/ (root)` on main** — that serves unbuilt source files and breaks CSS/images.  
+> The workflow builds the site into the `docs/` folder automatically.
 
 Live URL: [https://codesantu.github.io/ClickMorphy/](https://codesantu.github.io/ClickMorphy/)
 
